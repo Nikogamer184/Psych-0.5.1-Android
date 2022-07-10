@@ -63,7 +63,7 @@ class FreeplayState extends MusicBeatState
 		DiscordClient.changePresence("In the Menus", null);
 		#end
 
-		addSong('Tutorial', 1, 'gf', FlxColor.RED);
+		addSong('Tutorial', 1, 'gf', FlxColor.fromRGB(165, 0, 77));
 
 		WeekData.setDirectoryFromWeek();
 
