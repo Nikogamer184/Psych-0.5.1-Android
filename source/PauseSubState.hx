@@ -90,6 +90,7 @@ class PauseSubState extends MusicBeatSubstate
 
 		blueballedTxt.alpha = 0;
 		levelInfo.alpha = 0;
+		practiceText.alpha = 0;
 
 		levelInfo.x = FlxG.width - (levelInfo.width + 20);
 		blueballedTxt.x = FlxG.width - (blueballedTxt.width + 20);
@@ -97,6 +98,7 @@ class PauseSubState extends MusicBeatSubstate
 		FlxTween.tween(bg, {alpha: 0.6}, 0.4, {ease: FlxEase.quartInOut});
 		FlxTween.tween(levelInfo, {alpha: 1, y: 20}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.3});
 		FlxTween.tween(blueballedTxt, {alpha: 1, y: blueballedTxt.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.7});
+		FlxTween.tween(practiceText, {alpha: 1, y: practiceText.y + 5}, 0.4, {ease: FlxEase.quartInOut, startDelay: 0.7});
 
 		grpMenuShit = new FlxTypedGroup<Alphabet>();
 		add(grpMenuShit);
