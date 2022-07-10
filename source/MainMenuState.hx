@@ -173,7 +173,6 @@ class MainMenuState extends MusicBeatState
 	}
 
 	var selectedSomethin:Bool = false;
-	var bgBeat:Int = 0;
 	var colorEntry:FlxColor;
 	
 	override function update(elapsed:Float)
@@ -253,7 +252,7 @@ class MainMenuState extends MusicBeatState
 		override function beatHit() {
 			super.beatHit();
             		if(curBeat % 2 == 0)
-			bgColorChange();				
+			FlxTween.tween(FlxG.camera, {zoom:1.03}, 0.3, {ease: FlxEase.quadOut, type: BACKWARD});				
 		}
 
     function changeItem(huh:Int = 0)
@@ -283,23 +282,6 @@ class MainMenuState extends MusicBeatState
 				} 
 			}); 
 	}
-
-	function bgColorChange()
-		{
-			if(bgBeat > 1)
-				bgBeat = 0;
-
-			switch(bgBeat)
-			{
-				case 0:
-					colorEntry = 0xFF8971f9;
-				case 1:
-					colorEntry = 0xFFdf7098;
-			}
-
-			FlxTween.color(movingBG, 0.7, colorEntry, 0xfffde871, {ease: FlxEase.quadOut});
-			bgBeat++;	
-		}
 
         function select()
 		{
