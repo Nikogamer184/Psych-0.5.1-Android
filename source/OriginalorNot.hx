@@ -72,7 +72,7 @@ class OriginalorNot extends MusicBeatSubstate
 		updateOptions();
 
                 #if android
-		addVirtualPad(LEFT_RIGHT, A_B);
+		addVirtualPad(LEFT_RIGHT, D);
 		addPadCamera();
 		#end
 	}
@@ -96,7 +96,7 @@ class OriginalorNot extends MusicBeatSubstate
 		if(controls.ACCEPT) {
 			FlxG.sound.play(Paths.sound('cancelMenu'), 1);
 			MusicBeatState.switchState(FlxG.state);
-		} else if(controls.BACK) {
+		} else if(_virtualpad.buttonD.justPressed) {
 			if(onYes) {
 				var stuff:String = Highscore.formatSong(song, difficulty);
 				PlayState.SONG = Song.loadFromJson(stuff, song);
