@@ -98,13 +98,13 @@ class OriginalorNot extends MusicBeatSubstate
 			MusicBeatState.switchState(FlxG.state);
 		} else if(controls.ACCEPT) {
 			if(onYes) {
-				var stuff:String = Highscore.formatSong(song, 'new');
+				var stuff:String = Highscore.formatSong(song, difficulty);
 				PlayState.SONG = Song.loadFromJson(stuff, song);
 			    PlayState.isStoryMode = false;
 			    PlayState.storyDifficulty = difficulty;
 					LoadingState.loadAndSwitchState(new PlayState());
 		} else {
-		var stuff:String = Highscore.formatSong(song, 'old');
+		var stuff:String = Highscore.formatSong(song, difficulty);
 				PlayState.SONG = Song.loadFromJson(stuff, song);
 			    PlayState.isStoryMode = false;
 			    PlayState.storyDifficulty = difficulty;
