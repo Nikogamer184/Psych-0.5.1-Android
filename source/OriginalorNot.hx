@@ -101,13 +101,13 @@ class OriginalorNot extends MusicBeatSubstate
 				var stuff:String = Highscore.formatSong(song, 'new');
 				PlayState.SONG = Song.loadFromJson(stuff, song);
 			    PlayState.isStoryMode = false;
-			    PlayState.storyDifficulty = 'new';
+			    PlayState.storyDifficulty = difficulty;
 					LoadingState.loadAndSwitchState(new PlayState());
 		} else {
 		var stuff:String = Highscore.formatSong(song, 'old');
 				PlayState.SONG = Song.loadFromJson(stuff, song);
 			    PlayState.isStoryMode = false;
-			    PlayState.storyDifficulty = 'old';
+			    PlayState.storyDifficulty = difficulty;
 					LoadingState.loadAndSwitchState(new PlayState());
 				}
 			}
