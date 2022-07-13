@@ -322,7 +322,6 @@ if(songLowercase != 'tutorial') {
 					
 			destroyFreeplayVocals();
 } else {
- OriginalorNot.songname = songLowercase;
 openSubState(new OriginalorNot(songs[curSelected].songName, curDifficulty, songs[curSelected].songCharacter));
 			FlxG.sound.play(Paths.sound('scrollMenu'));
 }
