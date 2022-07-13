@@ -351,6 +351,7 @@ class Alphabet extends FlxSpriteGroup
 				x = FlxMath.lerp(x, (targetY * 20) + 90 + xAdd, lerpVal);
 			}
 		}
+	}
 
 		super.update(elapsed);
 	}
