@@ -41,7 +41,7 @@ class OriginalorNot extends MusicBeatSubstate
 		add(bg);
 
 		var tooLong:Float = (name.length > 18) ? 0.8 : 1; //Fucking Winter Horrorland
-		var text:Alphabet = new Alphabet(0, 180, "Reset the score of", true);
+		var text:Alphabet = new Alphabet(0, 180, "Choose song for", true);
 		text.screenCenter(X);
 		alphabetArray.push(text);
 		text.alpha = 0;
@@ -98,6 +98,7 @@ class OriginalorNot extends MusicBeatSubstate
 			MusicBeatState.switchState(FlxG.state);
 		} else if(_virtualpad.buttonD.justPressed) {
 			if(onYes) {
+			if(song == 'tutorial') {
 				var stuff:String = Highscore.formatSong(song, difficulty);
 				PlayState.SONG = Song.loadFromJson(stuff, song);
 			    PlayState.isStoryMode = false;
@@ -111,6 +112,7 @@ class OriginalorNot extends MusicBeatSubstate
 					LoadingState.loadAndSwitchState(new PlayState());
 				}
 			}
+		}
 		super.update(elapsed);
 	}
 
