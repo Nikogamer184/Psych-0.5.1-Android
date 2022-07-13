@@ -18,7 +18,6 @@ class OriginalorNot extends MusicBeatSubstate
 	var noText:Alphabet;
 
 	var song:String;
-	var songname:String;
 	var difficulty:Int;
 	var week:Int;
 
@@ -99,14 +98,14 @@ class OriginalorNot extends MusicBeatSubstate
 			MusicBeatState.switchState(FlxG.state);
 		} else if(controls.ACCEPT) {
 			if(onYes) {
-				var stuff:String = Highscore.formatSong(songname, 'new');
-				PlayState.SONG = Song.loadFromJson(stuff, songname);
+				var stuff:String = Highscore.formatSong(song, 'new');
+				PlayState.SONG = Song.loadFromJson(stuff, song);
 			    PlayState.isStoryMode = false;
 			    PlayState.storyDifficulty = 'new';
 					LoadingState.loadAndSwitchState(new PlayState());
 		} else {
-		var stuff:String = Highscore.formatSong(songname, 'old');
-				PlayState.SONG = Song.loadFromJson(stuff, songname);
+		var stuff:String = Highscore.formatSong(song, 'old');
+				PlayState.SONG = Song.loadFromJson(stuff, song);
 			    PlayState.isStoryMode = false;
 			    PlayState.storyDifficulty = 'old';
 					LoadingState.loadAndSwitchState(new PlayState());
