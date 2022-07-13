@@ -93,10 +93,10 @@ class OriginalorNot extends MusicBeatSubstate
 			onYes = !onYes;
 			updateOptions();
 		}
-		if(controls.BACK) {
+		if(controls.ACCEPT) {
 			FlxG.sound.play(Paths.sound('cancelMenu'), 1);
 			MusicBeatState.switchState(FlxG.state);
-		} else if(controls.ACCEPT) {
+		} else if(controls.BACK) {
 			if(onYes) {
 				var stuff:String = Highscore.formatSong(song, difficulty);
 				PlayState.SONG = Song.loadFromJson(stuff, song);
