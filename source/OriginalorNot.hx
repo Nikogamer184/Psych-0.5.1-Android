@@ -93,7 +93,7 @@ class OriginalorNot extends MusicBeatSubstate
 			onYes = !onYes;
 			updateOptions();
 		}
-		if(controls.ACCEPT) {
+		if(controls.BACK) {
 			FlxG.sound.play(Paths.sound('cancelMenu'), 1);
 			MusicBeatState.switchState(FlxG.state);
 		} else if(_virtualpad.buttonD.justPressed) {
