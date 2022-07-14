@@ -97,10 +97,10 @@ class OriginalorNot extends MusicBeatSubstate
 			FlxG.sound.play(Paths.sound('cancelMenu'), 1);
 			MusicBeatState.switchState(FlxG.state);
 		} else if(_virtualpad.buttonD.justPressed) {
-			if(song == 'Tutorial') {
+			if(song == 'Endless') {
 			if(onYes) {
-				var stuff:String = Highscore.formatSong(song, difficulty);
-				PlayState.SONG = Song.loadFromJson(stuff, song);
+				var stuff:String = Highscore.formatSong('Endless-New', difficulty);
+				PlayState.SONG = Song.loadFromJson(stuff, 'Endless-New');
 			    PlayState.isStoryMode = false;
 			    PlayState.storyDifficulty = difficulty;
 					LoadingState.loadAndSwitchState(new PlayState());
