@@ -64,6 +64,7 @@ class FreeplayState extends MusicBeatState
 		#end
 
 		addSong('Tutorial', 1, 'gf', FlxColor.fromRGB(165, 0, 77));
+		addSong('Endless', 1, 'majin', FlxColor.fromRGB(146, 113, 253));
 
 		WeekData.setDirectoryFromWeek();
 
@@ -302,7 +303,7 @@ class FreeplayState extends MusicBeatState
 				trace('Couldnt find file');
 			}*/
 			trace(poop);
-if(songLowercase != 'tutorial') {
+if(songLowercase != 'endless') {
 			PlayState.SONG = Song.loadFromJson(poop, songLowercase);
 			PlayState.isStoryMode = false;
 			PlayState.storyDifficulty = curDifficulty;
